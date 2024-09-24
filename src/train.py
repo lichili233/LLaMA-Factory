@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
 from llamafactory.train.tuner import run_exp
 
 
 def main():
+    os.environ["WANDB_DISABLED"] = "true"
     run_exp()
 
 
